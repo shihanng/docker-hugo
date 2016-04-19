@@ -1,13 +1,13 @@
 FROM debian:wheezy
 MAINTAINER shihanng@gmail.com
 
-# Install pygments (for syntax highlighting) 
+# Install pygments (for syntax highlighting)
 RUN apt-get -qq update \
 	&& DEBIAN_FRONTEND=noninteractive apt-get -qq install -y --no-install-recommends python-pygments \
 	&& rm -rf /var/lib/apt/lists/*
 
 # Download and install hugo
-ENV HUGO_VERSION 0.14
+ENV HUGO_VERSION 0.15
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_linux_amd64
 
 ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY}.tar.gz /usr/local/
