@@ -1,5 +1,5 @@
 FROM debian:wheezy
-MAINTAINER yigal@publysher.nl
+MAINTAINER shihanng@gmail.com
 
 # Install pygments (for syntax highlighting) 
 RUN apt-get -qq update \
