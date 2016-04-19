@@ -59,6 +59,10 @@ The image is also suitable for use as a volume image for a web server, such as [
 	docker run -d -v /usr/share/nginx/html --name site-data my/image
 	docker run -d --volumes-from site-data --name site-server -p 80:80 nginx
 
+Or, mount the directory from host as data volume and serve:
+
+	docker run -v `pwd`:/usr/share/blog -p 1313:1313 my/image hugo server --bind=0.0.0.0
+
 
 Examples
 --------
